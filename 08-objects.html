@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+      const product = {
+        name: 'socks',
+        price: 1090
+      };
+      console.log(product);
+      console.log(product.name);
+      console.log(product.price);
+
+      product.name = 'cotton socks';
+      console.log(product);
+
+      product.newProperty = true;
+      console.log(product);
+
+      delete product.newProperty;
+      console.log(product);
+      */
+
+      
+      const product2 = {
+        name: 'shirt',
+        'delivery-time': '1 day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function function1() {
+          console.log('function inside object');
+        }
+      };
+
+      // const j =JSON.stringify(product2);
+      // const x = JSON.parse(j);
+      // console.log(x)
+
+      const p2 = product2;
+      product2.name = 'Ball';
+      console.log(product2); // object is saving the properties as reference
+      console.log(p2);
+
+      const a = {
+        msg: 'Hi! everyone...',
+        name: 'Appu'
+      }
+
+      //const msg = a.msg;
+      //console.log(ab);
+
+      const {msg , name} = a; // both done the same job but this is called destructuring
+      console.log(msg , name);
+
+      const Msg = 'Hustle';
+
+      const a1 = {
+        //name : Msg
+        Msg ,//its a shortcut to save a variable
+
+        bb: function fun1(){
+          console.log('From the bottom');
+        },
+        bb(){
+          console.log('From the Top!!')
+        }
+        // both do the same fun job second one is a shorthand method
+      }
+
+      //console.log(a1);
+      console.log(a1.bb())
+
+  
+    </script>
+  </body>
+</html>

@@ -1,0 +1,56 @@
+body{
+    background-color: #ffffff;
+    font-family: arial;
+}
+
+.name{
+    font-family: arial;
+    font-size: 46px;
+    font-weight: bolder;
+    color: #3c5841;
+}
+
+.cal{
+    color: #3c5841;
+    font-size: 40px;
+    font-weight: bold;
+
+}
+
+.num-btn{
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 15px;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    color: #3c5841;
+    font-weight: bold;
+    font-size: 35px;
+    background-color: rgb(230, 230, 230);
+}
+
+.g-btn{
+    color: #32C64E;
+}
+
+.eql{
+    color: white;
+    background-color: #32C64E;
+    width: auto;
+    padding: 10px;
+    font-weight: normal;
+
+}
+
+.cnt{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.clr{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rough</title>
+    <style>
+        .btn-y {
+            border: none;
+            background-color: rgb(255, 216, 20);
+            color: black;
+            margin: 50px;
+            padding: 8px 50px;
+            font-size: 20px;
+            /*font-weight: bold;*/
+            border-radius: 50px;
+        }
+
+        .btn {
+            border: none;
+            padding: 10px 15px;
+            font-size: 15px;
+            font-weight: bold;
+            margin-right: 30px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .btn-b {
+            color: white;
+            background-color: black;
+        }
+
+        .btn-g {
+            background-color: rgb(230, 230, 230);
+        }
+        .on-off{
+            background-color: yellow;
+            color: red;
+            cursor: pointer;
+        }
+        .on{
+            background-color: black;
+            color: rgb(230, 230, 230);
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn-y"> Add To Cart </button>
+    <div>
+        <button class="btn btn-b"> Request now </button>
+        <button class="btn btn-g"> Schedule for later</button>
+    </div>
+
+    <button class="js-btn btn" >Test</button>
+    <button class="on-off btn bk" onclick="clik('.bk');"> Click</button>
+
+    <div>
+        <button class="btn bk1" onclick="clik('.bk1')">One</button>
+        <button class="btn bk2" onclick="clik('.bk2')">Two</button>
+        <button class="btn bk3" onclick="clik('.bk3')">Three</button>
+    </div>
+ 
+
+    <script>
+        function clik(stg){
+            const btn = document.querySelector(stg);            
+            if(!btn.classList.contains('on')){
+            chkOn();
+                btn.classList.add('on');
+            }
+            else{                
+                btn.classList.remove('on');
+            }
+
+        }
+        function chkOn(){
+            const btnOn = document.querySelector('.on');
+            if(btnOn){
+                btnOn.classList.remove('on');
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+body{
+    background-color: black;
+    color: white;
+    font-family: cursive;
+    font-size: 30px;
+    font-weight: bold;
+}
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.move-img{
+    height: 40px;
+}
+.move-btn{
+    background-color: transparent;
+    border: 3px solid white;
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.result{
+    font-size: 25px;
+    font-weight: bolder;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.score{
+    font-size: 30px;
+    margin-top: 60px;
+    text-align: center;
+}
+
+.reset-btn{
+    background-color: white;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 15px;
+    margin-top: 50px;
+    cursor: pointer; 
+}
+
+.move{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moves{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+    

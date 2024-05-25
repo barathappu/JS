@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Style/10-cal.css" />
+    <link rel="Icon" type="Images/x-icon" href="Images/171352_calculator_icon.png">
+</head>
+
+<body>
+    <div class="cnt">
+
+        <p class="name"><u>CALCULATOR</u></p>
+        <!-- Create an element to display the calculation. -->
+        <p class="js-calculation cal"></p>
+
+        <p>
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('1');
+      ">1</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('2');
+      ">2</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('3');
+      ">3</button>
+
+            <button class="num-btn g-btn" onclick="
+        updateCalculation(' + ');
+      ">+</button>
+        </p>
+
+        <p>
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('4');
+      ">4</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('5');
+      ">5</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('6');
+      ">6</button>
+
+            <button class="num-btn g-btn" onclick="
+        updateCalculation(' - ');
+      ">-</button>
+        </p>
+
+        <p>
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('7');
+      ">7</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('8');
+      ">8</button>
+
+            <button class="num-btn gy-btn" onclick="
+        updateCalculation('9');
+      ">9</button>
+
+            <button class="num-btn g-btn" onclick="
+        updateCalculation(' * ');
+      ">*</button>
+        </p>
+
+        <p>
+            <button class="num-btn g-btn" onclick="
+        updateCalculation('.');
+      ">.</button>
+
+            <button class="num-btn gy-btn" onclick="
+updateCalculation('0');
+">0</button>
+
+        <button class="num-btn g-btn" onclick="
+        // Note: eval() takes a string and runs it as code.
+        // Avoid using eval() in real world projects since
+        // it can potentially be given harmful code to run.
+        // Only use eval() for learning purposes.
+        calculation = eval(calculation);
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">=</button>
+
+            <button class="num-btn g-btn" onclick="
+        updateCalculation(' / ');
+      ">/</button>
+        </p>
+
+        <p class="clr">
+            <button class="num-btn eql" onclick="
+        calculation = '';
+
+        // Display the calculation on the page
+        // instead of console.log
+        displayCalculation();
+
+        localStorage.setItem('calculation', calculation);
+      ">Clear</button>
+        </p>
+    </div>
+
+    <script src="Scripts/10-cal.js"></script>
+
+</body>
+
+</html>
