@@ -1,42 +1,3 @@
-const products = [
-  {
-    image: "images/products/athletic-cotton-socks-6-pairs.jpg",
-    name: "Black and Gray Athletic Cotton Socks - 6 Pairs",
-    rating: {
-      stars: 4.5,
-      count: 87
-    },
-    priceCents: 1090,
-  },
-  {
-    image: "images/products/intermediate-composite-basketball.jpg",
-    name: "Intermediate Size Basketball",
-    rating: {
-      stars: 4,
-      count: 127
-    },
-    priceCents: 2095,
-  },
-  {
-    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
-    rating: {
-      stars: 4.5,
-      count: 56
-    },
-    priceCents: 799,
-  },
-  {
-    image: "images/products/black-2-slot-toaster.jpg",
-    name: "2 Slot Toaster - Black",
-    rating: {
-      stars: 5,
-      count: 2197
-    },
-    priceCents: 1899,
-  }
-];
-
 let ProductsHtml = "";
 
 products.forEach((products) => {
@@ -52,7 +13,8 @@ products.forEach((products) => {
 
     <div class="product-rating-container">
       <img class="product-rating-stars" src="images/ratings/rating-${
-        products.rating.stars * 10}.png">
+        products.rating.stars * 10
+      }.png">
       <div class="product-rating-count link-primary">
         ${products.rating.count}
       </div>
@@ -84,7 +46,9 @@ products.forEach((products) => {
       Added
     </div>
 
-    <button class="add-to-cart-button button-primary">
+    <button class="add-to-cart-button button-primary js-add-btn" data-pdt-name="${
+      products.name
+    }">
       Add to Cart
     </button>
   </div>
@@ -92,3 +56,26 @@ products.forEach((products) => {
 });
 
 document.querySelector(".product-data").innerHTML = ProductsHtml;
+
+document.querySelectorAll(".js-add-btn").forEach((button) => {
+  button.addEventListener("click", () => {
+    const productName = button.dataset.pdtName;
+    let matchItem;
+
+    cart.forEach((item) => {
+      if (productName === item.productName) {
+        matchItem = item;
+      }
+    });
+
+    if (matchItem) {
+      matchItem.quantity += 1;
+    } else {
+      cart.push({
+        productName: productName,
+        quantity: 1,
+      });
+    }
+console.log(cart);
+  });
+});
