@@ -73,7 +73,7 @@ document.querySelectorAll(".js-add-btn").forEach((button) => {
     } else {
       cart.push({
         productName: productName,
-        quantity: 1,
+        quantity: 1
       });
     }
 console.log(cart);
