@@ -230,50 +230,20 @@
 
 // console.log(filteredValues); // ["apple", "avocado", "apricot"]
 
-const multiply = (x,y) =>   console.log(x*y);
+// const multiply = (x,y) =>   console.log(x*y);
 
-multiply(2,30);
 
-const conutPos = (ar) => {
-  let i = 0;
-  ar.forEach((value) => {
-    if(value > 0){
-      i++;
-    }
-  });
-  console.log(i);
-};
+// class MyClass {
+//    methodA(){
+// // dfasd        
+//    }
+   
+//    methodB = () => {
+       
+//    }
+// }
 
-let a = [1,4,6,7,100];
+// const c = new MyClass();
+// console.log(c.hasOwnProperty('methodA'));
+// console.log(c.hasOwnProperty('methodB'));
 
-conutPos(a);
-
-const addNum = (arr,n) => {
-  const z = arr.map( value => value + n);
-  console.log(z);
-}
-
-addNum(a,100);
-
-const removeEgg = (food) => {
-  console.log(food.filter(value => value != 'egg'));
-}
-
-const ar1 = ['egg', 'apple', 'egg', 'egg', 'ham'];
-
-removeEgg(ar1);
-
-const removeEgg1 = (food) => {
-  let e = 0;
-  console.log(food.filter((value) => {
-    if (value === 'egg' && e < 2){
-      e++;
-      return false;
-    }
-    else{
-      return true;
-    }
-  }));
-}
-
-removeEgg1(ar1)
